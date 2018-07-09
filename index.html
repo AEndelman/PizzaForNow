@@ -13,19 +13,49 @@
     <!--Jquery link-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-        <title>Quick Dish</title>
+    <!--linking javascript file-->
+    <script src="assets/javascript/javascript.js"></script>
+
+    <title>Quick Dish</title>
 </head>
+
 <body>
-    <div class="jumbotron">
-    <h1>Quick Dish</h1>
-<h4>add ingredient</h4>
-<input type="text" name="new dish">
-<input type="submit">
-</div>
-<br><br>
-<div id="ingredients">
-    ingredients will append here
-</div>
+    <div>
+        <h1>Quick Dish</h1>
+        <a class="waves-effect waves-light btn">generate random dish</a>
+    </div>
+    <br>
+    <br>
+    <div id="ingredients">
+        ingredients will append here
+    </div>
+    <div>image and recipe will appear here</div>
+    <div>youtube video</div>
+
+    <div class="row">
+        <div class="col s12 m7">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/sample-1.jpg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
+                        require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg"> Your browser does not support the video tag.
+    </video>
+
+
 </body>
 
 </html>
