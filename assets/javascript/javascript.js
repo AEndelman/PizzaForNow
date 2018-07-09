@@ -15,11 +15,7 @@ $.ajax({
 
 
 
-// need to make 2 empty arry to get the items 
-// make the 22 arrays match
-// get the catagory of each food
-// get the youtube video to make the dish 
-// get the picture of the dish
+
 
 
 
