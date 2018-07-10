@@ -10,38 +10,63 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <!--materialize javascript link-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!--css style-->
+    <link rel="stylesheet" href="assets/css/style.css">
     <!--Jquery link-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <!--linking javascript file-->
     <script src="assets/javascript/javascript.js"></script>
 
+
+
     <title>Quick Dish</title>
 </head>
 
 <body>
+
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Quick Dish</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a href="sass.html">Zeppelin</a>
+                </li>
+                <li>
+                    <a href="badges.html">Aaron</a>
+                </li>
+                <li>
+                    <a href="collapsible.html">Ryeon</a>
+                </li>
+                <li>
+                    <a href="collapsible.html">Christian</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<br>
     <div>
-        <h1>Quick Dish</h1>
-        <a class="waves-effect waves-light btn">generate random dish</a>
+        <!-- <h1>Quick Dish</h1> -->
+        <a class="waves-effect waves-light btn ">Quick Dishicision</a>
     </div>
-    <br>
-    <br>
-    <div id="ingredients">
-        ingredients will append here
-    </div>
-    <div>image and recipe will appear here</div>
-    <div>youtube video</div>
+<br>
+
 
     <div class="row">
-        <div class="col s12 m7">
+        <div class="col s8 offset-s2">
             <div class="card">
                 <div class="card-image">
-                    <img src="images/sample-1.jpg">
+                    <img src="assets/images/placeholder.png">
                     <span class="card-title">Card Title</span>
                 </div>
                 <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
-                        require little markup to use effectively.</p>
+                    <p>cooking instructions</p>
+                    <div id="ingredients">
+                        ingredients will append here
+                    </div>
+                    <br>
+                    <div>image and recipe will appear here</div>
                 </div>
                 <div class="card-action">
                     <a href="#">This is a link</a>
@@ -50,10 +75,10 @@
         </div>
     </div>
 
-    <video width="320" height="240" controls>
+    <!-- <video width="320" height="240" controls>
         <source src="movie.mp4" type="video/mp4">
         <source src="movie.ogg" type="video/ogg"> Your browser does not support the video tag.
-    </video>
+    </video> -->
 
 
 </body>

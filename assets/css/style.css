@@ -1,0 +1,18 @@
+.card .card-image .card-title {
+    color: black;
+    background-color: green;
+    border-radius: 0px 40px 0px 0px;
+}
+
+/* .row {
+    margin: auto;
+    width: 100%;
+} */
+
+.waves-effect {
+    left: 45%;
+}
+
+.card {
+    height: 50%;
+}
