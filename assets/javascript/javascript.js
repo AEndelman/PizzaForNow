@@ -7,69 +7,60 @@ $.ajax({
 }).then(function (response) {
    var meal = response.meals[0];
    var currentMeal = meal.strMeal;
+   var currentMealString = JSON.stringify(currentMeal);
    var mealInstructions = meal.strInstructions;
    var mealPic = meal.strMealThumb;
    var mealIngredients = [];
+   var mealMeasures = [];
+   var totalIngredientMeasures = [];
 
-   // for (var key in response.meals[0]){
-   //     var ingredientString = JSON.stringify(response.meals[0].strIngredient1 + i);
-   //     var ingredient = JSON.parse(ingredientString);
-   //     console.log(ingredient);
-   //     var currentIngredient = JSON.stringify(ingredient);
-   //     mealIngredients.push(currentIngredient);
+   //Does a For in through the meal object and assigns to array based on key for ingredients
 
-   //     if(response.meals.strIngredient + i ===""){
-   //         break;
-   //     }
-   // }
+   for (var key in meal) {
 
-   mealIngredients.push(meal.strIngredient1);
-   mealIngredients.push(meal.strIngredient2);
-   mealIngredients.push(meal.strIngredient3);
-   mealIngredients.push(meal.strIngredient4);
-   mealIngredients.push(meal.strIngredient5);
-   mealIngredients.push(meal.strIngredient6);
-   mealIngredients.push(meal.strIngredient7);
-   mealIngredients.push(meal.strIngredient8);
-   mealIngredients.push(meal.strIngredient9);
-   mealIngredients.push(meal.strIngredient10);
-   mealIngredients.push(meal.strIngredient11);
-   mealIngredients.push(meal.strIngredient12);
-   mealIngredients.push(meal.strIngredient13);
-   mealIngredients.push(meal.strIngredient14);
-   mealIngredients.push(meal.strIngredient15);
-   mealIngredients.push(meal.strIngredient16);
-   mealIngredients.push(meal.strIngredient17);
-   mealIngredients.push(meal.strIngredient18);
-   mealIngredients.push(meal.strIngredient19);
-   mealIngredients.push(meal.strIngredient20);
-
-   for (i = 0; i<mealIngredients.length; i++){
-       if (mealIngredients[i]===""){
-           mealIngredients.splice(mealIngredients[i]);
+       if (key.includes("Ingredient") && meal[key]) {
+           var currentIngredient = meal[key];
+           mealIngredients.push(currentIngredient);
        }
+   }
+
+   //Does a For in through the meal object and assigns to array based on key for measure
+
+   for (var key in meal) {
+
+       if (key.includes("Measure") && meal[key]) {
+           var currentMeasure = meal[key];
+           mealMeasures.push(currentMeasure);
+       }
+   }
+
+   //Runs a for loop through the total ingredients length and combines with the measure as a string
+   for (i = 0; i < mealIngredients.length; i++) {
+       var totalIngredientMeasure = (mealIngredients[i] + " " + mealMeasures[i]);
+       totalIngredientMeasures.push(totalIngredientMeasure);
    }
 
    console.log(meal);
    console.log(currentMeal);
+   console.log(mealIngredients);
+   console.log(mealMeasures);
+   console.log(totalIngredientMeasures);
    console.log(mealInstructions);
    console.log(mealPic);
-   console.log(mealIngredients);
-   
+
+   function renderVid(){
+
+       var title = JSON.stringify(meal.strMeal);
+       var queryURL = "https://www.googleapis.com/youtube/v3/search?q=" + title + "&maxResults=25&part=snippet&key=AIzaSyAUM3sEZdx4h4h-1_fm6YTxAEXTwfAiYIw";
+       $.ajax({
+           url: queryURL,
+           method: "GET"
+       }).then(function (response) {
+           console.log(response);
+           var videoURL = "https://www.youtube.com/watch?v=" + response.items[0].id.videoId;
+           console.log(videoURL);
+       });
+   }
+
+   renderVid();
 });
-
-// use .notation
-
-
-
-
-
-
-
-// get the ingredients 1-20
-//  get the measurment 1-20
-// catagory
-// str meal
-// youtube
-// instructions
-// meal thumbnail

@@ -1,6 +1,6 @@
 .card .card-image .card-title {
     color: black;
-    background-color: green;
+    background-color:  floralwhite;
     border-radius: 0px 40px 0px 0px;
 }
 
@@ -15,4 +15,11 @@
 
 .card {
     height: 50%;
+}
+
+.card .card-action {
+    background-color: floralwhite;
+}
+.vidBtn {
+    float: left;
 }
