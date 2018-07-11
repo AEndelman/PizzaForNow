@@ -3,14 +3,16 @@
     background-color:  floralwhite;
     border-radius: 0px 40px 0px 0px;
 }
+.card-title {
+    text-align: center;
+    z-index: 1;
+    background-color: lightblue;
+    border-bottom: 4px solid black;
+}
 
-/* .row {
-    margin: auto;
-    width: 100%;
-} */
 
 .waves-effect {
-    left: 45%;
+    left: 44%;
 }
 
 .card {
@@ -22,4 +24,29 @@
 }
 .vidBtn {
     float: left;
+}
+
+html { 
+    background: url("../images/tableCloth.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+footer {
+    /* position: fixed; */
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: #ee6e73;
+    border-top: 5px solid black;
+}
+
+#names {
+    word-spacing: 40px;    
+
 }
