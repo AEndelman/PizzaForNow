@@ -6,8 +6,20 @@
 .card-title {
     text-align: center;
     z-index: 1;
-    background-color: lightblue;
+    color: rgb(51,65,76);
+    background-color: whitesmoke;
     border-bottom: 4px solid black;
+    border-top: 3px solid black;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    /* line-height: 1; */
+    text-shadow: #EDEDED 3px 2px 0;
+    position: relative;
 }
 
 
@@ -27,7 +39,7 @@
 }
 
 html { 
-    background: url("../images/tableCloth.png") no-repeat center center fixed; 
+    background: url("../images/background.png") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -50,3 +62,17 @@ footer {
     word-spacing: 40px;    
 
 }
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-shadow: #EDEDED 3px 2px 0;
+    position: relative;
+}
+
